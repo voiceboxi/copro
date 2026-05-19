@@ -48,6 +48,15 @@ gh auth login
 .\scripts\publish-github.ps1
 ```
 
+## Déploiement Vercel
+
+Le site web est généré avec `npm run build:web` (dossier `dist`). Le fichier `vercel.json` configure le build automatique.
+
+Paramètres Vercel du projet :
+- **Root Directory** : `.` (racine du dépôt)
+- **Build Command** : `npm run build:web`
+- **Output Directory** : `dist`
+
 ## Build production
 
 ```bash

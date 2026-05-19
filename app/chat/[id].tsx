@@ -9,6 +9,10 @@ import { CHATS } from '@/constants/mockData';
 import { useChat } from '@/context/ChatContext';
 import { CoproTheme } from '@/constants/theme';
 
+export function generateStaticParams() {
+  return CHATS.map((chat) => ({ id: chat.id }));
+}
+
 export default function ChatScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
   const router = useRouter();
