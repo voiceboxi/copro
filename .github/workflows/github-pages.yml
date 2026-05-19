@@ -43,17 +43,12 @@ jobs:
           commit_message: 'Deploy COPRO web preview'
 
       - name: Activer GitHub Pages (API)
+        continue-on-error: true
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          set -e
-          echo "Activation de GitHub Pages depuis la branche gh-pages..."
           gh api --method POST "/repos/${GITHUB_REPOSITORY}/pages" \
-            -f build_type=legacy \
-            -f "source[branch]=gh-pages" \
-            -f "source[path]=/" 2>/dev/null \
+            --input - <<< '{"build_type":"legacy","source":{"branch":"gh-pages","path":"/"}}' \
           || gh api --method PUT "/repos/${GITHUB_REPOSITORY}/pages" \
-            -f build_type=legacy \
-            -f "source[branch]=gh-pages" \
-            -f "source[path]=/"
-          echo "Pages activé. URL: https://voiceboxi.github.io/copro/"
+            --input - <<< '{"build_type":"legacy","source":{"branch":"gh-pages","path":"/"}}' \
+          || echo "Activez Pages manuellement : Settings → Pages → gh-pages / root"

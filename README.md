@@ -8,15 +8,19 @@ Application mobile de messagerie pour **copropriété**, inspirée de WhatsApp. 
 
 ### Si la page est vide ou affiche 404
 
-Le build est sur la branche [`gh-pages`](https://github.com/voiceboxi/copro/tree/gh-pages). Il faut **activer** GitHub Pages une fois :
+**GitHub Pages n’est pas encore activé** sur le dépôt. Choisissez **une** option :
 
-1. Ouvrez **[Settings → Pages](https://github.com/voiceboxi/copro/settings/pages)**
-2. **Build and deployment** → **Source** : **Deploy from a branch** (pas « GitHub Actions »)
-3. **Branch** : **`gh-pages`** / **`/ (root)`** → **Save**
-4. Onglet **[Actions](https://github.com/voiceboxi/copro/actions)** → workflow **Aperçu web GitHub Pages** → **Run workflow** (si besoin)
-5. Attendez 2–5 min, puis rechargez l’URL (Ctrl+F5)
+**Option A (la plus simple)** — dossier `docs/` sur `main` :
 
-Le workflow tente aussi d’activer Pages automatiquement via l’API GitHub.
+1. [Settings → Pages](https://github.com/voiceboxi/copro/settings/pages)
+2. Source : **Deploy from a branch**
+3. Branch : **`main`** / dossier **`/docs`** → **Save**
+4. Attendez 2 min → https://voiceboxi.github.io/copro/
+
+**Option B** — application Expo complète (branche `gh-pages`) :
+
+1. Même page Settings → branch **`gh-pages`** / **`/ (root)`**
+2. Workflow [Actions](https://github.com/voiceboxi/copro/actions) → **Run workflow**
 
 ## Fonctionnalités
 
