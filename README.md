@@ -2,6 +2,14 @@
 
 Application mobile de messagerie pour **copropriété**, inspirée de WhatsApp. Fonctionne sur **Android** et **iOS** via [Expo](https://expo.dev).
 
+## Aperçu en ligne (GitHub Pages)
+
+**https://voiceboxi.github.io/copro/**
+
+Publié automatiquement à chaque push sur `main` (workflow GitHub Actions).
+
+> Dans le dépôt GitHub : **Settings → Pages → Build and deployment → Source : GitHub Actions**.
+
 ## Fonctionnalités
 
 - **Discussions** : liste des conversations (syndic, voisins, groupes, alertes)

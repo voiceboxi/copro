@@ -1,5 +1,5 @@
 {
-  "buildCommand": "npm run build:web",
+  "buildCommand": "EXPO_BASE_URL= npm run build:web",
   "outputDirectory": "dist",
   "installCommand": "npm install",
   "framework": null,
