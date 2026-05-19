@@ -24,6 +24,26 @@ Puis :
 - **iOS** : appuyez sur `i` ou scannez avec l’appareil photo (Expo Go)
 - **Émulateur** : `npm run android` ou `npm run ios` (iOS nécessite macOS)
 
+## Publier sur GitHub
+
+1. Connectez-vous (une seule fois) :
+
+```bash
+gh auth login
+```
+
+2. Publiez le dépôt :
+
+```powershell
+.\scripts\publish-github.ps1
+```
+
+Ou manuellement :
+
+```bash
+gh repo create copro --public --source=. --remote=origin --push
+```
+
 ## Build production
 
 ```bash
