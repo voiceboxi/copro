@@ -6,9 +6,14 @@ Application mobile de messagerie pour **copropriété**, inspirée de WhatsApp. 
 
 **https://voiceboxi.github.io/copro/**
 
-Publié automatiquement à chaque push sur `main` (workflow GitHub Actions).
+Publié automatiquement à chaque push sur `main`.
 
-> Dans le dépôt GitHub : **Settings → Pages → Build and deployment → Source : GitHub Actions**.
+**Configuration unique (si la page est vide ou 404) :**
+
+1. [Settings → Pages](https://github.com/voiceboxi/copro/settings/pages)
+2. **Build and deployment** → **Source** : **Deploy from a branch**
+3. **Branch** : `gh-pages` → dossier **`/ (root)`** → **Save**
+4. Attendre 1–2 min après le workflow **Actions** (vert ✅)
 
 ## Fonctionnalités
 
