@@ -26,22 +26,26 @@ Puis :
 
 ## Publier sur GitHub
 
-1. Connectez-vous (une seule fois) :
+### Méthode recommandée (token)
 
-```bash
-gh auth login
-```
+Si `gh auth login` échoue (pare-feu, erreur OAuth) :
 
-2. Publiez le dépôt :
+1. Créez un token : [github.com/settings/tokens/new](https://github.com/settings/tokens/new) (scope **repo**)
+2. Dans PowerShell :
 
 ```powershell
-.\scripts\publish-github.ps1
+cd c:\Users\voice\Downloads\Cursor-open\application
+$env:GH_TOKEN = "ghp_VOTRE_TOKEN"
+.\scripts\connect-github.ps1
 ```
 
-Ou manuellement :
+Le script connecte `gh` et crée le dépôt **copro** sur votre compte.
 
-```bash
-gh repo create copro --public --source=. --remote=origin --push
+### Méthode classique
+
+```powershell
+gh auth login
+.\scripts\publish-github.ps1
 ```
 
 ## Build production
